@@ -7,7 +7,7 @@ dat <- read.table("household_power_consumption.txt",sep=";",header=TRUE,na.strin
 dat2 <- rbind(dat[(dat$Dat == "1/2/2007"),],dat[(dat$Date == "2/2/2007"),])
 GAP <- dat2[,3]
 
-### convert dates into usable formats 
+### convert dates into usable formats and create new column
 dates <- as.Date(as.character(dat2$Date),"%d/%m/%Y")
 times <- as.character(dat2$Time)
 X <- paste(dates,time)
